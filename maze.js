@@ -23,3 +23,60 @@ const maze = (S) => {
 }
 
 console.log(maze(S))
+
+const Nomer1 = (number) => {
+    if(number%15 == 0){
+        console.log('Fish Bash')
+    }else if(number%5 == 0){
+        console.log('bash')
+    }else if(number%3 == 0){
+        console.log('Fish')
+    }
+}
+
+for (let i = 1; i<=30; i++){
+    console.log(i)
+    Nomer1(i);
+}
+
+
+
+const arr = [3,4,2,6,3,1,9,5,2,6,20,50,30,25,36]
+
+const Nomer2 = (array) => {
+    let swap = true
+    let j = 0
+
+    for (let i = 0; i < array.length - j ; i++) {
+        for (let j = 0; j < array.length-i-1; j++) {
+            if(array[j]>array[j+1]){
+                let tmp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = tmp
+            }
+        }
+    }
+
+    return array;
+}
+
+console.log(Nomer2(arr))
+
+
+const Nomer3 = (str) => {
+    const str_split = str.split("")
+    let newstr = '';
+    const length = str_split.length
+
+    for (let i = 0; i < length; i++) {
+        newstr += str_split[length-i-1]
+    }
+
+    if (str === newstr) {
+        return true
+    }
+
+    return false
+}
+
+console.log(Nomer3("hallo"))
